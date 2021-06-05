@@ -65,7 +65,23 @@ function SignOut(){
 }
 
 function ChatRoom(){
+  const messageRef = fireStore.collection('message')
+  const query = messageRef.orderBy('created').limit(25)
+  const [messages]=useCollectionData(query,{idField:'id'})
   return(
-    <div></div>
+    <div>
+       {messages && messages.map(msg=><ChatMessage key={msg.id} message={msg} />)}
+    </div>
+  )
+}
+
+function ChatMessage(props){
+  const {text,uid,ftoUrl} = props.message;
+  const messageClass = uid==auth.currentUser.uid ? 'Sent' : 'received';
+  return(
+    <div className={`message ${messageClass}`}>
+        <img src = {ftoUrl} />
+        <p>{text}</p>
+    </div>
   )
 }
