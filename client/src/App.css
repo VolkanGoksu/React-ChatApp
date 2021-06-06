@@ -8,7 +8,7 @@
 }
 
 .App header{
-    background-color: #c44569;
+    background-color: #075E54;
     height: 10vh;
     min-height: 50px;
     color:white;
@@ -28,7 +28,7 @@
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
-    background-color: #f19666;
+    background-color: 	#25D366
 }
 
 main{
@@ -64,14 +64,15 @@ form{
 
 form button{
     width: 20%;
-    background-color: #574b90;
+    background-color:#4682B4;
+
 }
 
 input{
     line-height: 1.5;
     width: 100%;
     font-size: 1.5rem;
-    background: rgb(58,58,58);
+    background:	#4682B4;
     color:white;
     outline:none;
     border:none;
@@ -125,11 +126,11 @@ p{
     align-items: center;
 }
 
-.sent{
+.Sent{
     flex-direction: row-reverse;
 }
 
-.sent p{
+.Sent p{
     color:white;
     background: #0b93f6;
     align-self: flex-end;
@@ -145,5 +146,5 @@ img{
     height: 40px;
     border-radius: 50%;
     margin: 2px 5px;
-    
+
 }

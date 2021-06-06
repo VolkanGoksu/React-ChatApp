@@ -47,7 +47,9 @@ function SignIn() {
   return (
 
     <div>
-      <button className="sign in" onClick={SignInGoogle}>Giriş Yap</button>
+      <button className="sign in" onClick={SignInGoogle}><i class="fas fa-sign-in-alt"></i>
+
+</button>
     </div>
 
   )
@@ -62,7 +64,7 @@ function SignOut() {
 
     auth.currentUser && (
       <button className="sign out" onClick={SignOutGoogle}>
-        Çıkış Yap
+        <i class="fas fa-sign-out-alt"></i>
       </button>
     )
 
@@ -94,7 +96,7 @@ function ChatRoom() {
       </div>
       <form onSubmit={sendMessage}>
          <input value = {formValue} onChange={(e)=>setFormValue(e.target.value)} />
-         <button type='submit' disabled={!formValue}>Gönder</button>
+         <button type='submit' disabled={!formValue}><i class="fas fa-check"></i></button>
       </form>
     </>
   )
